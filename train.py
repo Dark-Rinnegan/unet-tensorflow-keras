@@ -98,7 +98,7 @@ with sess.as_default():
             saver.save(sess, opt.checkpoint_path+'model', global_step=global_step)
             print ('save a checkpoint at '+ opt.checkpoint_path+'model-'+str(it))
             print ('start testing {} samples...'.format(test_samples))
-            for ti in range(test_samples):
+            for it in range(test_samples):
                 x_batch, y_batch = next(test_generator)
                 # tensorflow wants a different tensor order
                 feed_dict = {   
